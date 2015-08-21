@@ -1,4 +1,4 @@
-# personal
+# Portfolio
 
 Online resume of sorts
 
