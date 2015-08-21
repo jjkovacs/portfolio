@@ -1,0 +1,21 @@
+.nav-widget-container {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	border: 7px solid rgba(255, 255, 255, .5);
+	display: inline-block;
+	transition-property: border-color;
+	transition-duration: .3s;
+	cursor: pointer;
+}
+
+.nav-widget-container:hover {
+	border-color: rgba(200, 200, 200, .5);
+}
+
+.nav-widget-container .nav-widget {
+	width: 100%;
+	height: 100%;
+	border-radius: calc(100%/2);
+	background-size: cover;
+}
