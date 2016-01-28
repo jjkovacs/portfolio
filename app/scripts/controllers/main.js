@@ -1,15 +1,7 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name personalApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the personalApp
- */
 angular.module('personalApp')
-  .controller('MainCtrl', function ($timeout, $location, ROUTES) {
-    var controller = this;
+  .controller('MainCtrl', function ($scope, $timeout, $location, ROUTES) {
     var messages = [{
       msg: 'Hello!',
       timeout: 1500,
@@ -25,8 +17,8 @@ angular.module('personalApp')
     
     function displayWelcomeMessage(index) {
       var m = messages[index];
-      controller.msg = m.msg;
-      controller.show = true;
+      $scope.msg = m.msg;
+      $scope.show = true;
       
       $timeout(incrementMessage.bind(null, index), m.timeout);
     }
@@ -38,7 +30,7 @@ angular.module('personalApp')
         return;
       }
       
-      controller.show = false;
+      $scope.show = false;
       $timeout(displayWelcomeMessage.bind(null, currentIndex), 1000);
     }
     

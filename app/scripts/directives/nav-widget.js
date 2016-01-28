@@ -15,7 +15,6 @@ angular.module('personalApp')
 					var s = {
 						'background-image': 'url(' + scope.navWidget.background + ')'
 					};
-					console.log(s);
 					return s;
 				}
 			}

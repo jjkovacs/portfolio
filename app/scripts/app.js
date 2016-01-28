@@ -10,16 +10,11 @@
  */
 angular
   .module('personalApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngRoute'
   ])
   .constant('ROUTES', {
     MAIN: '/',
-    NAV: '/navigation',
+    NAV: '/nav',
     ABOUT: '/about',
     NWS: '/nws',
     GM: '/gm',
@@ -30,40 +25,60 @@ angular
     $routeProvider
       .when(ROUTES.MAIN, {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl'
       })
       .when(ROUTES.NAV, {
         templateUrl: 'views/nav.html',
-        controller: 'NavCtrl',
-        controllerAs: 'nav'
+        controller: 'NavCtrl'
       })
       .when(ROUTES.ABOUT, {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+        templateUrl: 'views/info.html',
+        controller: 'AboutCtrl'
       })
       .when(ROUTES.EDUCATION, {
-        templateUrl: 'views/education.html',
-        controller: 'EducationCtrl',
-        controllerAs: 'education'
+        templateUrl: 'views/info.html',
+        controller: 'EducationCtrl'
       })
       .when(ROUTES.NWS, {
-        templateUrl: 'views/nws.html',
-        controller: 'NwsCtrl',
-        controllerAs: 'nws'
+        templateUrl: 'views/info.html',
+        controller: 'NwsCtrl'
       })
       .when(ROUTES.GM, {
-        templateUrl: 'views/gm.html',
-        controller: 'GMCtrl',
-        controllerAs: 'gm'
+        templateUrl: 'views/info.html',
+        controller: 'GmCtrl'
       })
       .when(ROUTES.CONTACT, {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
+        controller: 'ContactCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope, $location, $route, $window, ROUTES){
+    $rootScope.toolbarLinks = [{
+      text: 'Home',
+      route: $route.routes[ROUTES.NAV],
+      hash: '#' + ROUTES.NAV
+    },{
+      text: 'About',
+      route: $route.routes[ROUTES.ABOUT],
+      hash: '#' + ROUTES.ABOUT
+    },{
+      text: 'Edu',
+      route: $route.routes[ROUTES.EDUCATION],
+      hash: '#' + ROUTES.EDUCATION
+    },{
+      text: 'GM',
+      route: $route.routes[ROUTES.GM],
+      hash: '#' + ROUTES.GM
+    },{
+      text: 'NWS',
+      route: $route.routes[ROUTES.NWS],
+      hash: '#' + ROUTES.NWS
+    }];
+    
+    $rootScope.isActive = function(route) {
+      return $route.current.$$route === route;
+    };
   });

@@ -1,51 +1,70 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name personalApp.controller:NavCtrl
- * @description
- * # NavCtrl
- * Controller of the personalApp
- */
 angular.module('personalApp')
-  .controller('NavCtrl', function ($timeout, $location, $window, ROUTES) {
-    var controller = this;
-    
-    controller.navWidgets = [{
+  .controller('NavCtrl', function ($scope, $timeout, $location, $window, $q, ROUTES) {
+    $scope.navWidgets = [{
       background: 'assets/images/selfie.jpg',
       callback: function(){
-        $location.path(ROUTES.ABOUT);
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.ABOUT);
+          });
       }
     }, {
       background: 'assets/images/blockm.jpg',
       callback: function(){
-        $location.path(ROUTES.EDUCATION);
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.EDUCATION);
+          });
       }
     }, {
       background: 'assets/images/gm.jpg',
       callback: function(){
-        $location.path(ROUTES.GM);
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.GM);
+          });
       }
     }, {
       background: 'assets/images/nws.jpg',
       callback: function(){
-        $location.path(ROUTES.NWS);
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.NWS);
+          });
       }
     }, {
       background: 'assets/images/at.jpg',
       callback: function(){
-        $location.path(ROUTES.CONTACT);
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.CONTACT);
+          });
       }
     }, {
       background: 'assets/images/in.jpg',
       callback: function(){
-        $window.location.href = 'https://www.linkedin.com/in/jjkovacs89';
+        hideNavAndDelay()
+          .then(function(){
+            $window.location.href = 'https://www.linkedin.com/in/jjkovacs89';
+          });
       }
     }];
     
     $timeout(showNav, 500);
     
     function showNav() {
-      controller.show = true;
+      $scope.show = true;
+    }
+    
+    function hideNavAndDelay() {
+      var deferred = $q.defer();
+      
+      $scope.show = false;
+      
+      $timeout(deferred.resolve, 1000);
+      
+      return deferred.promise;
     }
   });

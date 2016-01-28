@@ -1,14 +1,10 @@
-.navigation {
+.navigation.transition {
 	position: absolute;
 	top: calc(20% + 50px);
 	width: 100%;
-	opacity: 0;
-	transition-property: opacity, top;
-	transition-duration: 1s, 1s;
 }
 
-.navigation.show {
-	opacity: 1;
+.navigation.transition.go {
 	top: calc(20%);
 }
 

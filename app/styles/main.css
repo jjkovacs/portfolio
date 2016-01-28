@@ -64,11 +64,11 @@ body {
 }
 
 .header .navbar-nav > li > a.active {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #fff;
 }
 
 .header .navbar-nav > li > a:not(.active):hover {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #ccc;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -153,4 +153,14 @@ body {
   opacity: 1;
   top: 45%;
   transition-duration: 1s, 1s;
+}
+
+.transition {
+	opacity: 0;
+	transition-property: opacity, top;
+	transition-duration: .75s, .75s;
+}
+
+.transition.go {
+	opacity: 1;
 }
