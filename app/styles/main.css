@@ -17,6 +17,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #4f4242;
+  background-attachment: fixed;
 }
 
 body {
@@ -179,4 +180,8 @@ body {
 
 .transition.go {
 	opacity: 1;
+}
+
+a {
+  color: #0089ff;
 }
