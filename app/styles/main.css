@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Walkway';
-  src: url('../assets/fonts/Walkway Semibold.ttf') format(truetype);
+  src: url('../assets/fonts/Walkway_Semibold.ttf') format(truetype);
 }
 
 .browsehappy {
@@ -12,14 +12,19 @@
 
 html {
   height: 100%;
+  background-image: url(../assets/images/rencen_blur.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #4f4242;
 }
 
 body {
   padding: 0;
   color: #fff;
   height: 100%;
-  background-color: #171717;
   font-family: 'Walkway', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  background-color: transparent;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -94,7 +99,6 @@ body {
   display: none;
 }
 
-/* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
@@ -105,15 +109,11 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  background-image: url(../assets/images/rencen_blur.png);
-  background-position: 50% -200px;
-  background-repeat: no-repeat;
-  background-color: transparent;
   margin: 0;
   height: 100%;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {

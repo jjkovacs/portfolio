@@ -11,14 +11,6 @@ angular.module('personalApp')
           });
       }
     }, {
-      background: 'assets/images/blockm.jpg',
-      callback: function(){
-        hideNavAndDelay()
-          .then(function(){
-            $location.path(ROUTES.EDUCATION);
-          });
-      }
-    }, {
       background: 'assets/images/gm.jpg',
       callback: function(){
         hideNavAndDelay()
@@ -32,6 +24,14 @@ angular.module('personalApp')
         hideNavAndDelay()
           .then(function(){
             $location.path(ROUTES.NWS);
+          });
+      }
+    }, {
+      background: 'assets/images/blockm.jpg',
+      callback: function(){
+        hideNavAndDelay()
+          .then(function(){
+            $location.path(ROUTES.EDUCATION);
           });
       }
     }, {
