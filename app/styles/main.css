@@ -93,6 +93,7 @@ body {
   background-position: center;
   background-size:contain;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .header .back.hide {
