@@ -37,10 +37,7 @@ angular.module('personalApp')
     }, {
       background: 'assets/images/at.jpg',
       callback: function(){
-        hideNavAndDelay()
-          .then(function(){
-            $location.path(ROUTES.CONTACT);
-          });
+        $window.location.href = 'mailto:jjkovacs89@gmail.com';
       }
     }, {
       background: 'assets/images/in.jpg',

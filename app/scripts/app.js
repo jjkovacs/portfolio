@@ -48,10 +48,6 @@ angular
         templateUrl: 'views/info.html',
         controller: 'GmCtrl'
       })
-      .when(ROUTES.CONTACT, {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
