@@ -38,6 +38,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-http-to-https": "^1.1.4"
   }
 }

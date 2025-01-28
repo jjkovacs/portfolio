@@ -10,7 +10,8 @@
  */
 angular
   .module('personalApp', [
-    'ngRoute'
+    'ngRoute',
+    'ngSanitize'
   ])
   .constant('ROUTES', {
     MAIN: '/',
@@ -55,7 +56,7 @@ angular
         redirectTo: '/'
       });
   })
-  .run(function($rootScope, $location, $route, $window, ROUTES){
+  .run(function($rootScope, $location, $route, ROUTES){
     $rootScope.toolbarLinks = [{
       text: 'Home',
       route: $route.routes[ROUTES.NAV],
@@ -80,5 +81,14 @@ angular
     
     $rootScope.isActive = function(route) {
       return $route.current.$$route === route;
+    };
+
+    $rootScope.$on('$routeChangeSuccess', function(e, current){
+      console.log(current.$$route.originalPath);
+      $rootScope.page = current.$$route.originalPath;
+    });
+
+    $rootScope.back = function(){
+      $location.path(ROUTES.NAV);
     };
   });

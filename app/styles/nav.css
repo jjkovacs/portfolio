@@ -9,7 +9,7 @@
 }
 
 .navigation .widget-container {
-	width: 400px;
+	width: auto;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
