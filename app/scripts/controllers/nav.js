@@ -3,7 +3,7 @@
 angular.module('personalApp')
   .controller('NavCtrl', function ($scope, $timeout, $location, $window, $q, ROUTES) {
     $scope.navWidgets = [{
-      background: 'assets/images/selfie.jpg',
+      background: 'assets/images/facebook_selfie.jpg',
       callback: function(){
         hideNavAndDelay()
           .then(function(){
