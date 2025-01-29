@@ -20,6 +20,13 @@ html {
   background-attachment: fixed;
 }
 
+/* background-attachment: fixed doesnt work on mobile, and i dont want to use javascript to make it work */
+@media (pointer: coarse) {
+  html {
+      background-attachment: initial;
+  }
+}
+
 body {
   padding: 0;
   color: #fff;
