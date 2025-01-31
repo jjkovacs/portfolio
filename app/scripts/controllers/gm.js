@@ -13,7 +13,7 @@ angular.module('personalApp')
 
         "<img src=\"../../assets/images/ngi_homescreen.jpg\" class=\"info-img\" />",
   
-        "Over the next few years, we released various software updates to these connected vehicles, to new vehicles, and to regions outside of North America. These updates provided new features such as the ability to purchase OnStar plans/services, single sign-on, and a notifications platform. In 2018, we launched the infotainment counterpart to the mobile \"MyBrand\" app (myChevrolet, myCadillac, etc.)--providing features and functionality targeted to vehicle ownership, such as: service scheduling with a dealer, digital owner's manual, roadside assistance, and the ability to view your current OnStar products/services. By 2024, our apps were available on over 13 million vehicles in North America alone.",
+        "Over the next few years, we released various software updates to these connected vehicles, to new vehicles, and to regions outside of North America. These updates provided new features such as the ability to purchase OnStar plans/services, single sign-on, and a notifications platform. In 2018, we launched the infotainment counterpart to the mobile <a href=\"https://chevroletdemo.com/invehicleapps/mychevrolet/1\">\"MyBrand\"</a> app (myChevrolet, myCadillac, etc.)--providing features and functionality targeted to vehicle ownership, such as: service scheduling with a dealer, digital owner's manual, roadside assistance, and the ability to view your current OnStar products/services. By 2024, our apps were available on over 13 million vehicles in North America alone.",
 
         "<img src=\"../../assets/images/ngi_marketplace.webp\" class=\"info-img\" />",
   
