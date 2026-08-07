@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap');
+
+@theme {
+  --font-display: "Oswald", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-steel-950: #0e1013;
+  --color-steel-900: #14171b;
+  --color-steel-800: #1c2126;
+  --color-steel-700: #262d34;
+  --color-steel-600: #333c45;
+  --color-steel-500: #4a5560;
+  --color-steel-400: #6b7681;
+  --color-steel-300: #9aa4ad;
+  --color-steel-200: #c5cbd1;
+  --color-steel-100: #e7e9ec;
+
+  --color-concrete-50: #f7f5f0;
+  --color-concrete-100: #efece3;
+
+  --color-motor-blue-900: #0d2440;
+  --color-motor-blue-700: #16447a;
+  --color-motor-blue-500: #2568ab;
+  --color-motor-blue-300: #6ea3d6;
+
+  --color-motor-gold-700: #a97c15;
+  --color-motor-gold-500: #d9a521;
+  --color-motor-gold-400: #e8bd4e;
+  --color-motor-gold-300: #f0d488;
+
+  --color-brick-700: #7c2e21;
+  --color-brick-600: #a13d2d;
+  --color-brick-500: #bf4c37;
+
+  --shadow-glow-gold: 0 0 40px rgba(217, 165, 33, 0.25);
+  --shadow-glow-blue: 0 0 40px rgba(37, 104, 171, 0.25);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--color-steel-950);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-steel-100);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-motor-gold-500);
+  color: var(--color-steel-950);
+}
+
+/* Scrollbar - subtle industrial styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-steel-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel-600);
+  border-radius: 999px;
+  border: 2px solid var(--color-steel-950);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-motor-gold-700);
+}
+
+/* Blueprint grid background used behind hero / section accents */
+.bg-blueprint {
+  background-image:
+    linear-gradient(rgba(106, 163, 214, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(106, 163, 214, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-rivets {
+  background-image: radial-gradient(rgba(217, 165, 33, 0.15) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, var(--color-motor-gold-400), var(--color-motor-gold-500) 45%, var(--color-brick-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-heading-underline {
+  position: relative;
+  display: inline-block;
+}
+.section-heading-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 4px;
+  width: 64px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-motor-gold-500), var(--color-brick-600));
+}
+
+.card-panel {
+  background: linear-gradient(160deg, rgba(38, 45, 52, 0.7), rgba(20, 23, 27, 0.75));
+  border: 1px solid rgba(154, 164, 173, 0.14);
+  backdrop-filter: blur(6px);
+}
+
+.chip {
+  border: 1px solid rgba(154, 164, 173, 0.25);
+  background: rgba(38, 45, 52, 0.6);
+  transition: all 0.25s ease;
+}
+.chip:hover {
+  border-color: var(--color-motor-gold-500);
+  background: rgba(217, 165, 33, 0.12);
+  transform: translateY(-2px);
+}
