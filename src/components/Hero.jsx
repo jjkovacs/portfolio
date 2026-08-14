@@ -43,7 +43,7 @@ export default function Hero() {
           variants={fadeUp}
           className="font-display font-semibold text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-steel-100"
         >
-          James Joseph
+          James
           <br />
           <span className="text-gradient-gold">Kovacs</span>
         </motion.h1>
