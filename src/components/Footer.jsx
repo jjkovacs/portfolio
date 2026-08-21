@@ -84,7 +84,7 @@ export default function Footer() {
           </a>
         </motion.div>
 
-        <p className="text-steel-500 text-sm mb-14 text-center">
+        <p className="text-steel-300 text-sm mb-14 text-center">
           {profile.location}
         </p>
       </div>
